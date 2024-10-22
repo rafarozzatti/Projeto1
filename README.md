@@ -1,6 +1,6 @@
 # Projeto1
 
-Modelo Entidade Relacionamento:
+## Modelo Entidade Relacionamento:
 
 ![alt text](image-1.png)
 
@@ -61,3 +61,28 @@ CREATE TABLE Musica_Artistas (
     FOREIGN KEY (artista_id) REFERENCES Artistas(id)
 );
 ```
+### Instruções:
+#### 1. **Rodar o Código SQL:**
+   - Copie e cole o código SQL no console ou no editor de SQL.
+   - O código cria as seguintes tabelas:
+     - **Usuarios**: Armazena dados dos usuários.
+     - **Artistas**: Armazena informações dos artistas.
+     - **Discos**: Guarda os discos lançados pelos artistas.
+     - **Musicas**: Armazena as músicas e suas informações.
+     - **Playlists**: Contém as playlists criadas pelos usuários.
+     - **Playlist_Musicas**: Liga músicas às playlists (relação N:N).
+     - **Musica_Artistas**: Liga músicas aos artistas (relação N:N).
+
+#### 2. **Executar o Código SQL:**
+   - Cole o código diretamente e aperte **Enter** ou **Executar**
+
+#### 3. **Verificar se as Tabelas Foram Criadas**:
+   - Após a execução bem-sucedida, verifique se as tabelas foram criadas corretamente.
+
+#### 4. **Inserir Dados nas Tabelas**:
+   - Depois que as tabelas são criadas, insira dados como este exemplo:
+     ```sql
+     INSERT INTO Usuarios (nome, email, data_registro) VALUES ('João Silva', 'joao@exemplo.com', '2024-01-01');
+     ```
+
+Agora o banco de dados está pronto para armazenar informações do seu sistema de streaming de música!
