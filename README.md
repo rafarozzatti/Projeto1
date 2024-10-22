@@ -375,3 +375,7 @@ JOIN Playlist_Musicas pm ON p.id = pm.playlist_id
 GROUP BY p.id, u.nome, p.titulo
 HAVING COUNT(pm.musica_id) >= 5;;
 ```
+### Instruções:
+   - Execute cada query uma de cada vez.
+   - Substitua os valores de exemplo (como `'Nome do Artista'` e `'Bohemian Rhapsody'`) com os valores reais que deseja consultar.
+   - Verifique os resultados diretamente no cliente MySQL.
