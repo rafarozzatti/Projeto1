@@ -8,7 +8,8 @@ Modelo Entidade Relacionamento:
 
 ## Queries para a criação das tabelas necessárias:
 
-```CREATE TABLE Usuarios (
+```
+    CREATE TABLE Usuarios (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -58,4 +59,5 @@ CREATE TABLE Musica_Artistas (
     PRIMARY KEY (musica_id, artista_id),
     FOREIGN KEY (musica_id) REFERENCES Musicas(id),
     FOREIGN KEY (artista_id) REFERENCES Artistas(id)
-);```
+);
+```
