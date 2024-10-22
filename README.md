@@ -155,3 +155,58 @@ if __name__ == "__main__":
         cursor.close()
         db.close()
 ```
+### Instruções:
+#### 1. **Pré-requisitos:**
+   - **Python 3** instalado.
+   - Biblioteca **Faker** instalada:
+     - Execute no terminal:
+       ```python
+       pip install faker
+       ```
+   - Biblioteca **mysql-connector-python** instalada:
+     - Execute no terminal:
+       ```python
+       pip install mysql-connector-python
+       ```
+   - Banco de dados MySQL criado e configurado.
+
+#### 2. **Configurar o Banco de Dados:**
+   - Crie um banco de dados MySQL chamado `streaming_musica`.
+   - Certifique-se de que as tabelas estão criadas conforme o código SQL anterior.
+
+#### 3. **Configurar Conexão com o Banco de Dados:**
+   - No código, altere as configurações de conexão com o banco:
+     ```python
+     db_config = {
+         'host': 'localhost',
+         'user': 'usuario',   # Substitua por seu usuário do MySQL
+         'password': 'senha', # Substitua pela sua senha
+         'database': 'streaming_musica'
+     }
+     ```
+   - Ajuste `user` e `password` conforme as credenciais do seu banco de dados.
+
+#### 4. **Gerar e Inserir Dados Aleatórios:**
+   - O código gera dados aleatórios para as seguintes tabelas:
+     - **Artistas**: 10 artistas com nomes e datas de nascimento.
+     - **Usuarios**: 10 usuários com nomes, e-mails e datas de registro.
+     - **Discos**: 10 discos, cada um associado a um artista.
+     - **Musicas**: Cada disco tem entre 5 e 10 músicas.
+     - **Playlists**: 10 playlists, cada uma associada a um usuário.
+     - **Playlist_Musicas**: Cada playlist tem entre 5 e 10 músicas aleatórias.
+
+#### 5. **Rodar o Código Python:**
+   - Salve o código Python em um arquivo (`inserir_dados.py`, por exemplo).
+   - Execute o arquivo no terminal:
+     ```python
+     python inserir_dados.py
+     ```
+   - O código conectará ao banco de dados e gerará os dados automaticamente.
+
+#### 6. **Verificar Inserções no Banco de Dados:**
+   - Após a execução, os dados aleatórios serão inseridos nas tabelas.
+   - Use uma ferramenta como **MySQL Workbench** ou o terminal **MySQL** para verificar os dados:
+     ```sql
+     SELECT * FROM Artistas;
+     SELECT * FROM Usuarios;
+     ```
