@@ -6,4 +6,4 @@ Modelo Entidade Relacionamento:
 
 Modelo relacional na 3FN (Normalização):
 
-# Queries para a criação das tabelas necessárias:
+## Queries para a criação das tabelas necessárias:
