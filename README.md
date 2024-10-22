@@ -9,6 +9,33 @@
 
 ## Modelo relacional na 3FN (Normalização):
 
+### 1.TAbela: Usuario
+![alt text](image-2.png)
+A tabela Usuario já está normalizada, cada campo é atômico e não há dependências parciais ou transitivas.
+
+### 2.TAbela: Artista
+![alt text](image-3.png)
+A tabela Artista também está na 3FN, pois os campos são atômicos e não há dependências transitivas.
+
+### 3.TAbela: Disco
+![alt text](image-4.png)
+Cada disco tem uma chave primária e todos os campos dependem totalmente dessa chave. Não há dependências transitivas. A chave estrangeira ID_Artista faz referência ao artista.
+
+### 4.TAbela: Musica
+![alt text](image-5.png)
+A tabela Musica está na 3FN. Cada música depende da chave primária ID_Musica, e a chave estrangeira ID_Disco garante a referência correta ao disco.
+
+### 5.TAbela: Playlist
+![alt text](image-6.png)
+Cada playlist pertence a um usuário, e todos os atributos dependem diretamente da chave primária ID_Playlist. A chave estrangeira ID_Usuario referencia corretamente o criador da playlist.
+
+### 6.TAbela: Playlist_Musica
+![alt text](image-7.png)
+Esta tabela resolve o relacionamento muitos-para-muitos entre playlists e músicas. Ambas as chaves estrangeiras (ID_Playlist e ID_Musica) formam a chave primária composta.
+
+### 7.TAbela: Usuario
+![alt text](image-8.png)
+Esta tabela resolve o relacionamento muitos-para-muitos entre artistas e músicas. Novamente, as chaves estrangeiras formam uma chave primária composta.
 
 ## Queries para a criação das tabelas necessárias:
 
